@@ -1,0 +1,492 @@
+\doxysection{/\+Users/fedep/\+Desktop/università/\+Prog/\+FEDERICO\+\_\+\+PRATIC0\textquotesingle{}\+\_\+\+PROGETTO\+\_\+\+IAP/src/domino.c File Reference}
+\hypertarget{domino_8c}{}\label{domino_8c}\index{/Users/fedep/Desktop/università/Prog/FEDERICO\_PRATIC0\textquotesingle{}\_PROGETTO\_IAP/src/domino.c@{/Users/fedep/Desktop/università/Prog/FEDERICO\_PRATIC0\textquotesingle{}\_PROGETTO\_IAP/src/domino.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}domino.\+h"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{domino_8c_aeea27cafe0853b7b5ca7f7257b609547}{title}} (void)
+\begin{DoxyCompactList}\small\item\em Function to print the title of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a43d471a825493025ee22a7bc1ac98052}{rules}} (void)
+\begin{DoxyCompactList}\small\item\em Function to print the rules of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ad16e5e62f3579a7048e6b981b172885e}{menu}} (void)
+\begin{DoxyCompactList}\small\item\em Menu for handling the interaction with the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ae150ebe449bb782e67d6c803c3aca4dc}{wrong\+\_\+selection}} (void)
+\begin{DoxyCompactList}\small\item\em Function to print an error message for a wrong selection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_a8e6315474e374d7f6c949028a56b6495}{start\+\_\+slection}} (void)
+\begin{DoxyCompactList}\small\item\em Function to confirm the selected mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_acf77e8456f61ef2277dba117aac0cd6f}{level\+\_\+menu}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}hand)
+\begin{DoxyCompactList}\small\item\em Function to select the level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSelections}{Selections}} \mbox{\hyperlink{domino_8c_a1be50d4d7efcf81e92717df1d08c1afd}{game\+\_\+questions}} (void)
+\begin{DoxyCompactList}\small\item\em Function to handle the choices during the game. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_acf4f1ac35aa068e5a074437939f9cc94}{is\+\_\+empty}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\begin{DoxyCompactList}\small\item\em Check if a list is empty. The function returns 1 if the pointer is NULL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_a174b9b814d870047bdebedaab31eb9db}{equalpointers}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} first, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} second)
+\begin{DoxyCompactList}\small\item\em Check if two pointers are equals. The function returns 1 the two pointers are equlals. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_a273f734c1f8d1063eded84731ccbef54}{random\+\_\+number}} (void)
+\begin{DoxyCompactList}\small\item\em The function generate random numbers between 1 and 6, that is, the possible numbers each side of a card can hold. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_a1432f46503d78da17d75277afec02fd0}{pairing\+\_\+check\+\_\+selection}} (\mbox{\hyperlink{structValue}{Value}} hand, \mbox{\hyperlink{structValue}{Value}} table, int side)
+\begin{DoxyCompactList}\small\item\em The function check if the card to insert is compatible with the card in the table. The function returns 0 if the two cards are not compatible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{domino_8c_a80135911ecf57ec620cf59b264a5c229}{game\+\_\+score}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\item 
+int \mbox{\hyperlink{domino_8c_aae6818e8a398216db4554df80f2118b0}{check\+\_\+combinations}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} hand\+\_\+head, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} table\+\_\+head, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} table\+\_\+tail)
+\begin{DoxyCompactList}\small\item\em The function check if there are other possible combinations to continue the game. The function check if there are other possible combinations and it increases a counter if a combination exists. If no combinations are found the game ends. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_abe5581c92efcfd957b4ce4bcbe2b3381}{INSERT\+\_\+\+ERROR}} (void)
+\begin{DoxyCompactList}\small\item\em Print an error message for insertion\textquotesingle{}s errors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a23bd846bf2c060189bc141553569054a}{SELECTION\+\_\+\+ERROR}} (void)
+\begin{DoxyCompactList}\small\item\em Print an error message for selection\textquotesingle{}s errors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ac332517c2ec7ce14e67c5c548fa6d634}{printlist}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\begin{DoxyCompactList}\small\item\em Function to print a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a2c18fc07d55d87c0cba4292d39bebf29}{print\+\_\+table}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\begin{DoxyCompactList}\small\item\em Function to print the table. This function uses the printlist function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a6a5d4e196dbd96fa3690acc1728931f4}{print\+\_\+hand}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\begin{DoxyCompactList}\small\item\em Function to print the player\textquotesingle{}s hand. This function uses the printlist function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ae27a8070558eb7db8f1d242a4d80a8dd}{print\+\_\+final\+\_\+score}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} head)
+\begin{DoxyCompactList}\small\item\em Function to print the total score at the end of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ae15713392fc9be61deffd92ab0601dd0}{append}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}tail, \mbox{\hyperlink{structValue}{Value}} val)
+\begin{DoxyCompactList}\small\item\em Append a \doxylink{structCard}{Card}\textquotesingle{}s \doxylink{structValue}{Value} at the end of a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_ae8069f00a66fb76c095923fe5a9eaf8c}{prepend}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}tail, \mbox{\hyperlink{structValue}{Value}} val)
+\begin{DoxyCompactList}\small\item\em Insert a \doxylink{structCard}{Card}\textquotesingle{}s \doxylink{structValue}{Value} at the beginning of a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a1d8b9520d6aa2b71f7d38f47e431c54f}{swap}} (\mbox{\hyperlink{structValue}{Value}} \texorpdfstring{$\ast$}{*}sides)
+\begin{DoxyCompactList}\small\item\em Swaps left value and right value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a5631901899f9d583e165a0410410d027}{delete\+\_\+card}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, int card\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Delete a \doxylink{structCard}{Card} and free the memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structValue}{Value}} \mbox{\hyperlink{domino_8c_a3cf80263824e9d65e345b7e6986f724b}{select\+\_\+card}} (const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, int \texorpdfstring{$\ast$}{*}card\+\_\+selection)
+\begin{DoxyCompactList}\small\item\em Function to select a player\textquotesingle{}s hand card and return the left and right values in it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_a97bd80ba638ecea766445fdadc60dee0}{delete\+\_\+hand}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em The function free the player\textquotesingle{}s hand memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_aab256c6168f11ddfaa76f1766266def1}{delete\+\_\+table}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}tail)
+\begin{DoxyCompactList}\small\item\em The function free the table\textquotesingle{}s memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_aa7a1bfd6fa428b5ed685bcc96997304c}{player\+\_\+hand}} (\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}head, int len)
+\begin{DoxyCompactList}\small\item\em The function fill the player\textquotesingle{}s hand with the number of cards chosen with level\+\_\+menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{domino_8c_aa955c9dc8bb6af806b9d6748cfb90ccd}{interattiva}} (int \texorpdfstring{$\ast$}{*}selection)
+\begin{DoxyCompactList}\small\item\em Game mode where the player play in an interactive way. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{domino_8c_ae15713392fc9be61deffd92ab0601dd0}\index{domino.c@{domino.c}!append@{append}}
+\index{append@{append}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily \label{domino_8c_ae15713392fc9be61deffd92ab0601dd0} 
+void append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{tail}{, }\item[{\mbox{\hyperlink{structValue}{Value}}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Append a \doxylink{structCard}{Card}\textquotesingle{}s \doxylink{structValue}{Value} at the end of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to \doxylink{structCard}{Card} \\
+\hline
+{\em tail} & pointer to \doxylink{structCard}{Card} \\
+\hline
+{\em val} & struct \doxylink{structValue}{Value} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_aae6818e8a398216db4554df80f2118b0}\index{domino.c@{domino.c}!check\_combinations@{check\_combinations}}
+\index{check\_combinations@{check\_combinations}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{check\_combinations()}{check\_combinations()}}
+{\footnotesize\ttfamily \label{domino_8c_aae6818e8a398216db4554df80f2118b0} 
+int check\+\_\+combinations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{hand\+\_\+head}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{table\+\_\+head}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{table\+\_\+tail}{}\end{DoxyParamCaption})}
+
+
+
+The function check if there are other possible combinations to continue the game. The function check if there are other possible combinations and it increases a counter if a combination exists. If no combinations are found the game ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hand\+\_\+head} & pointer to \doxylink{structCard}{Card} \\
+\hline
+{\em table\+\_\+head} & pointer to \doxylink{structCard}{Card} \\
+\hline
+{\em table\+\_\+tail} & pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a5631901899f9d583e165a0410410d027}\index{domino.c@{domino.c}!delete\_card@{delete\_card}}
+\index{delete\_card@{delete\_card}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{delete\_card()}{delete\_card()}}
+{\footnotesize\ttfamily \label{domino_8c_a5631901899f9d583e165a0410410d027} 
+void delete\+\_\+card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{card\+\_\+selection}{}\end{DoxyParamCaption})}
+
+
+
+Delete a \doxylink{structCard}{Card} and free the memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em card\+\_\+selection} & integer that contains card\textquotesingle{}s position in the list \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_a97bd80ba638ecea766445fdadc60dee0}\index{domino.c@{domino.c}!delete\_hand@{delete\_hand}}
+\index{delete\_hand@{delete\_hand}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{delete\_hand()}{delete\_hand()}}
+{\footnotesize\ttfamily \label{domino_8c_a97bd80ba638ecea766445fdadc60dee0} 
+void delete\+\_\+hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+The function free the player\textquotesingle{}s hand memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_aab256c6168f11ddfaa76f1766266def1}\index{domino.c@{domino.c}!delete\_table@{delete\_table}}
+\index{delete\_table@{delete\_table}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{delete\_table()}{delete\_table()}}
+{\footnotesize\ttfamily \label{domino_8c_aab256c6168f11ddfaa76f1766266def1} 
+void delete\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{tail}{}\end{DoxyParamCaption})}
+
+
+
+The function free the table\textquotesingle{}s memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em tail} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_a174b9b814d870047bdebedaab31eb9db}\index{domino.c@{domino.c}!equalpointers@{equalpointers}}
+\index{equalpointers@{equalpointers}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{equalpointers()}{equalpointers()}}
+{\footnotesize\ttfamily \label{domino_8c_a174b9b814d870047bdebedaab31eb9db} 
+int equalpointers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{first}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{second}{}\end{DoxyParamCaption})}
+
+
+
+Check if two pointers are equals. The function returns 1 the two pointers are equlals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & pointer to \doxylink{structCard}{Card} \\
+\hline
+{\em second} & pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a1be50d4d7efcf81e92717df1d08c1afd}\index{domino.c@{domino.c}!game\_questions@{game\_questions}}
+\index{game\_questions@{game\_questions}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{game\_questions()}{game\_questions()}}
+{\footnotesize\ttfamily \label{domino_8c_a1be50d4d7efcf81e92717df1d08c1afd} 
+\mbox{\hyperlink{structSelections}{Selections}} game\+\_\+questions (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Function to handle the choices during the game. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structSelections}{Selections} 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a80135911ecf57ec620cf59b264a5c229}\index{domino.c@{domino.c}!game\_score@{game\_score}}
+\index{game\_score@{game\_score}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{game\_score()}{game\_score()}}
+{\footnotesize\ttfamily \label{domino_8c_a80135911ecf57ec620cf59b264a5c229} 
+int game\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+\Hypertarget{domino_8c_abe5581c92efcfd957b4ce4bcbe2b3381}\index{domino.c@{domino.c}!INSERT\_ERROR@{INSERT\_ERROR}}
+\index{INSERT\_ERROR@{INSERT\_ERROR}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{INSERT\_ERROR()}{INSERT\_ERROR()}}
+{\footnotesize\ttfamily \label{domino_8c_abe5581c92efcfd957b4ce4bcbe2b3381} 
+void INSERT\+\_\+\+ERROR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Print an error message for insertion\textquotesingle{}s errors. 
+
+\Hypertarget{domino_8c_aa955c9dc8bb6af806b9d6748cfb90ccd}\index{domino.c@{domino.c}!interattiva@{interattiva}}
+\index{interattiva@{interattiva}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{interattiva()}{interattiva()}}
+{\footnotesize\ttfamily \label{domino_8c_aa955c9dc8bb6af806b9d6748cfb90ccd} 
+void interattiva (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{selection}{}\end{DoxyParamCaption})}
+
+
+
+Game mode where the player play in an interactive way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selection} & pointer to int \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_acf4f1ac35aa068e5a074437939f9cc94}\index{domino.c@{domino.c}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily \label{domino_8c_acf4f1ac35aa068e5a074437939f9cc94} 
+int is\+\_\+empty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Check if a list is empty. The function returns 1 if the pointer is NULL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & const pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_acf77e8456f61ef2277dba117aac0cd6f}\index{domino.c@{domino.c}!level\_menu@{level\_menu}}
+\index{level\_menu@{level\_menu}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{level\_menu()}{level\_menu()}}
+{\footnotesize\ttfamily \label{domino_8c_acf77e8456f61ef2277dba117aac0cd6f} 
+int level\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{hand}{}\end{DoxyParamCaption})}
+
+
+
+Function to select the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hand} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_ad16e5e62f3579a7048e6b981b172885e}\index{domino.c@{domino.c}!menu@{menu}}
+\index{menu@{menu}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \label{domino_8c_ad16e5e62f3579a7048e6b981b172885e} 
+void menu (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Menu for handling the interaction with the player. 
+
+\Hypertarget{domino_8c_a1432f46503d78da17d75277afec02fd0}\index{domino.c@{domino.c}!pairing\_check\_selection@{pairing\_check\_selection}}
+\index{pairing\_check\_selection@{pairing\_check\_selection}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{pairing\_check\_selection()}{pairing\_check\_selection()}}
+{\footnotesize\ttfamily \label{domino_8c_a1432f46503d78da17d75277afec02fd0} 
+int pairing\+\_\+check\+\_\+selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structValue}{Value}}}]{hand}{, }\item[{\mbox{\hyperlink{structValue}{Value}}}]{table}{, }\item[{int}]{side}{}\end{DoxyParamCaption})}
+
+
+
+The function check if the card to insert is compatible with the card in the table. The function returns 0 if the two cards are not compatible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hand} & struct \doxylink{structValue}{Value} \\
+\hline
+{\em table} & struct \doxylink{structValue}{Value} \\
+\hline
+{\em side} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_aa7a1bfd6fa428b5ed685bcc96997304c}\index{domino.c@{domino.c}!player\_hand@{player\_hand}}
+\index{player\_hand@{player\_hand}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{player\_hand()}{player\_hand()}}
+{\footnotesize\ttfamily \label{domino_8c_aa7a1bfd6fa428b5ed685bcc96997304c} 
+void player\+\_\+hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+The function fill the player\textquotesingle{}s hand with the number of cards chosen with level\+\_\+menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em len} & int ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_ae8069f00a66fb76c095923fe5a9eaf8c}\index{domino.c@{domino.c}!prepend@{prepend}}
+\index{prepend@{prepend}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{prepend()}{prepend()}}
+{\footnotesize\ttfamily \label{domino_8c_ae8069f00a66fb76c095923fe5a9eaf8c} 
+void prepend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{\mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{tail}{, }\item[{\mbox{\hyperlink{structValue}{Value}}}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Insert a \doxylink{structCard}{Card}\textquotesingle{}s \doxylink{structValue}{Value} at the beginning of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em tail} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em val} & struct \doxylink{structValue}{Value} type \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_ae27a8070558eb7db8f1d242a4d80a8dd}\index{domino.c@{domino.c}!print\_final\_score@{print\_final\_score}}
+\index{print\_final\_score@{print\_final\_score}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{print\_final\_score()}{print\_final\_score()}}
+{\footnotesize\ttfamily \label{domino_8c_ae27a8070558eb7db8f1d242a4d80a8dd} 
+void print\+\_\+final\+\_\+score (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Function to print the total score at the end of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & const pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_a6a5d4e196dbd96fa3690acc1728931f4}\index{domino.c@{domino.c}!print\_hand@{print\_hand}}
+\index{print\_hand@{print\_hand}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{print\_hand()}{print\_hand()}}
+{\footnotesize\ttfamily \label{domino_8c_a6a5d4e196dbd96fa3690acc1728931f4} 
+void print\+\_\+hand (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Function to print the player\textquotesingle{}s hand. This function uses the printlist function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & const pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_a2c18fc07d55d87c0cba4292d39bebf29}\index{domino.c@{domino.c}!print\_table@{print\_table}}
+\index{print\_table@{print\_table}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{print\_table()}{print\_table()}}
+{\footnotesize\ttfamily \label{domino_8c_a2c18fc07d55d87c0cba4292d39bebf29} 
+void print\+\_\+table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Function to print the table. This function uses the printlist function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & const pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_ac332517c2ec7ce14e67c5c548fa6d634}\index{domino.c@{domino.c}!printlist@{printlist}}
+\index{printlist@{printlist}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{printlist()}{printlist()}}
+{\footnotesize\ttfamily \label{domino_8c_ac332517c2ec7ce14e67c5c548fa6d634} 
+void printlist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Function to print a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & const pointer to \doxylink{structCard}{Card} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_a273f734c1f8d1063eded84731ccbef54}\index{domino.c@{domino.c}!random\_number@{random\_number}}
+\index{random\_number@{random\_number}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{random\_number()}{random\_number()}}
+{\footnotesize\ttfamily \label{domino_8c_a273f734c1f8d1063eded84731ccbef54} 
+int random\+\_\+number (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+The function generate random numbers between 1 and 6, that is, the possible numbers each side of a card can hold. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a43d471a825493025ee22a7bc1ac98052}\index{domino.c@{domino.c}!rules@{rules}}
+\index{rules@{rules}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{rules()}{rules()}}
+{\footnotesize\ttfamily \label{domino_8c_a43d471a825493025ee22a7bc1ac98052} 
+void rules (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Function to print the rules of the game. 
+
+\Hypertarget{domino_8c_a3cf80263824e9d65e345b7e6986f724b}\index{domino.c@{domino.c}!select\_card@{select\_card}}
+\index{select\_card@{select\_card}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{select\_card()}{select\_card()}}
+{\footnotesize\ttfamily \label{domino_8c_a3cf80263824e9d65e345b7e6986f724b} 
+\mbox{\hyperlink{structValue}{Value}} select\+\_\+card (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{p\+Card}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{card\+\_\+selection}{}\end{DoxyParamCaption})}
+
+
+
+Function to select a player\textquotesingle{}s hand card and return the left and right values in it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & pointer to p\+Card (p\+Card is a pointer to \doxylink{structCard}{Card}) \\
+\hline
+{\em card\+\_\+selection} & pointer to card\+\_\+selection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structValue}{Value} 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a23bd846bf2c060189bc141553569054a}\index{domino.c@{domino.c}!SELECTION\_ERROR@{SELECTION\_ERROR}}
+\index{SELECTION\_ERROR@{SELECTION\_ERROR}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{SELECTION\_ERROR()}{SELECTION\_ERROR()}}
+{\footnotesize\ttfamily \label{domino_8c_a23bd846bf2c060189bc141553569054a} 
+void SELECTION\+\_\+\+ERROR (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Print an error message for selection\textquotesingle{}s errors. 
+
+\Hypertarget{domino_8c_a8e6315474e374d7f6c949028a56b6495}\index{domino.c@{domino.c}!start\_slection@{start\_slection}}
+\index{start\_slection@{start\_slection}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{start\_slection()}{start\_slection()}}
+{\footnotesize\ttfamily \label{domino_8c_a8e6315474e374d7f6c949028a56b6495} 
+int start\+\_\+slection (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Function to confirm the selected mode. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{domino_8c_a1d8b9520d6aa2b71f7d38f47e431c54f}\index{domino.c@{domino.c}!swap@{swap}}
+\index{swap@{swap}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily \label{domino_8c_a1d8b9520d6aa2b71f7d38f47e431c54f} 
+void swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structValue}{Value}} \texorpdfstring{$\ast$}{*}}]{sides}{}\end{DoxyParamCaption})}
+
+
+
+Swaps left value and right value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sides} & pointer to \doxylink{structValue}{Value} ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{domino_8c_aeea27cafe0853b7b5ca7f7257b609547}\index{domino.c@{domino.c}!title@{title}}
+\index{title@{title}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily \label{domino_8c_aeea27cafe0853b7b5ca7f7257b609547} 
+void title (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Function to print the title of the game. 
+
+\Hypertarget{domino_8c_ae150ebe449bb782e67d6c803c3aca4dc}\index{domino.c@{domino.c}!wrong\_selection@{wrong\_selection}}
+\index{wrong\_selection@{wrong\_selection}!domino.c@{domino.c}}
+\doxysubsubsection{\texorpdfstring{wrong\_selection()}{wrong\_selection()}}
+{\footnotesize\ttfamily \label{domino_8c_ae150ebe449bb782e67d6c803c3aca4dc} 
+void wrong\+\_\+selection (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Function to print an error message for a wrong selection. 
+

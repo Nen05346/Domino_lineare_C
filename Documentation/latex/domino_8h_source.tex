@@ -1,0 +1,76 @@
+\doxysection{domino.\+h}
+\hypertarget{domino_8h_source}{}\label{domino_8h_source}\index{/Users/fedep/Desktop/università/Prog/FEDERICO\_PRATIC0\textquotesingle{}\_PROGETTO\_IAP/include/domino.h@{/Users/fedep/Desktop/università/Prog/FEDERICO\_PRATIC0\textquotesingle{}\_PROGETTO\_IAP/include/domino.h}}
+\mbox{\hyperlink{domino_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOMINO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOMINO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structValue_a89621372e55323b391e42f58d68ce0b9}{left}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structValue_a11e7fcea1ea6ef6418aa3076f202d9b9}{right}};}
+\DoxyCodeLine{00011\ \}\mbox{\hyperlink{structValue}{Value}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode}{node}}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structValue}{Value}}\ \mbox{\hyperlink{structnode_a1ca2ec1b43d1c8201a8108c19d25a7ba}{values}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode}{node}}\ *\mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}};}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ selections\ struct}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSelections_a75a357dd28e9489357c93c79ea79f69a}{side}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSelections_a73e2bcc891d7edd02e2389807a68af9f}{swap}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSelections_a3ea139966730c1df41c8e9322d96f90b}{confirm}};}
+\DoxyCodeLine{00035\ \}\mbox{\hyperlink{structSelections}{Selections}};}
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnode}{node}}\ \mbox{\hyperlink{structCard}{Card}};}
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structCard}{Card}}*\ \mbox{\hyperlink{domino_8h_a3bb7752a4b5b34559e6dd7083d522350}{pCard}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ MENU\ AND\ GRAPHIC\ LAYOUT\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_aeea27cafe0853b7b5ca7f7257b609547}{title}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ad16e5e62f3579a7048e6b981b172885e}{menu}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a43d471a825493025ee22a7bc1ac98052}{rules}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ae150ebe449bb782e67d6c803c3aca4dc}{wrong\_selection}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_a8e6315474e374d7f6c949028a56b6495}{start\_slection}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_acf77e8456f61ef2277dba117aac0cd6f}{level\_menu}}(\mbox{\hyperlink{structCard}{pCard}}\ *hand);}
+\DoxyCodeLine{00087\ \mbox{\hyperlink{structSelections}{Selections}}\ \mbox{\hyperlink{domino_8h_a1be50d4d7efcf81e92717df1d08c1afd}{game\_questions}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ GENERAL\ UTILITIES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_acf4f1ac35aa068e5a074437939f9cc94}{is\_empty}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_a174b9b814d870047bdebedaab31eb9db}{equalpointers}}(\mbox{\hyperlink{structCard}{pCard}}\ first,\ \mbox{\hyperlink{structCard}{pCard}}\ second);}
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_a273f734c1f8d1063eded84731ccbef54}{random\_number}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_a1432f46503d78da17d75277afec02fd0}{pairing\_check\_selection}}(\mbox{\hyperlink{structValue}{Value}}\ hand,\ \mbox{\hyperlink{structValue}{Value}}\ table,\ \textcolor{keywordtype}{int}\ side);}
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_a644c8e662e8e94d8236feeb657f31dfc}{score}}(\mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{domino_8h_aae6818e8a398216db4554df80f2118b0}{check\_combinations}}(\mbox{\hyperlink{structCard}{pCard}}\ hand\_head,\ \mbox{\hyperlink{structCard}{pCard}}\ table\_head,\ \mbox{\hyperlink{structCard}{pCard}}\ table\_tail);\ \ \ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ac332517c2ec7ce14e67c5c548fa6d634}{printlist}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00151\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a2c18fc07d55d87c0cba4292d39bebf29}{print\_table}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a6a5d4e196dbd96fa3690acc1728931f4}{print\_hand}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00163\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ae27a8070558eb7db8f1d242a4d80a8dd}{print\_final\_score}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ head);}
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ae15713392fc9be61deffd92ab0601dd0}{append}}(\mbox{\hyperlink{structCard}{pCard}}\ *head,\ \mbox{\hyperlink{structCard}{pCard}}\ *tail,\ \mbox{\hyperlink{structValue}{Value}}\ val);}
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_ae8069f00a66fb76c095923fe5a9eaf8c}{prepend}}(\mbox{\hyperlink{structCard}{pCard}}\ *head,\ \mbox{\hyperlink{structCard}{pCard}}\ *tail,\ \mbox{\hyperlink{structValue}{Value}}\ val);}
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a1d8b9520d6aa2b71f7d38f47e431c54f}{swap}}(\mbox{\hyperlink{structValue}{Value}}\ *sides);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a5631901899f9d583e165a0410410d027}{delete\_card}}(\mbox{\hyperlink{structCard}{pCard}}\ *head,\ \textcolor{keywordtype}{int}\ card\_selection);}
+\DoxyCodeLine{00201\ \mbox{\hyperlink{structValue}{Value}}\ \mbox{\hyperlink{domino_8h_a3cf80263824e9d65e345b7e6986f724b}{select\_card}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCard}{pCard}}\ *head,\ \textcolor{keywordtype}{int}\ *card\_selection);}
+\DoxyCodeLine{00206\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_abe5581c92efcfd957b4ce4bcbe2b3381}{INSERT\_ERROR}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00211\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a23bd846bf2c060189bc141553569054a}{SELECTION\_ERROR}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ DELETE\ FUNCTIONS\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00223\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_aab256c6168f11ddfaa76f1766266def1}{delete\_table}}(\mbox{\hyperlink{structCard}{pCard}}\ *head,\ \mbox{\hyperlink{structCard}{pCard}}*\ tail);}
+\DoxyCodeLine{00229\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_a97bd80ba638ecea766445fdadc60dee0}{delete\_hand}}(\mbox{\hyperlink{structCard}{pCard}}\ *head);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ PLAYER'S\ HAND\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00239\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_aa7a1bfd6fa428b5ed685bcc96997304c}{player\_hand}}(\mbox{\hyperlink{structCard}{pCard}}\ *head,\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ GAME\ FUNCTIONS\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00247\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{domino_8h_aa955c9dc8bb6af806b9d6748cfb90ccd}{interattiva}}(\textcolor{keywordtype}{int}\ *selection);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOMINO\_H}}
+
+\end{DoxyCode}
